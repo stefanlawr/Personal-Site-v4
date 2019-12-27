@@ -1,8 +1,15 @@
+// $colors: (
+//   primary: darken(#f4f4f4, 5%),
+//   secondary: #ff7315,
+//   information: #3a3535,
+//   warning: #232020
+// );
+
 $colors: (
-  primary: darken(#f4f4f4, 5%),
-  secondary: #ff7315,
-  information: #3a3535,
-  warning: #232020
+  primary: #f0f5f9,
+  secondary: #1e2022,
+  information: #52616b,
+  warning: #1e2022
 );
 
 @function color($color-name) {
@@ -138,6 +145,13 @@ nav {
   }
 }
 
+.inview {
+  span {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+}
+
 // Media Queries
 
 @media (max-width: 600px) {
@@ -176,5 +190,37 @@ nav {
     padding-top: 1rem;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  section#home {
+    background: color(primary);
+    display: flex;
+    flex-direction: column;
+    // Vertical
+    justify-content: center;
+    // Horizontal
+    align-items: center;
+
+    opacity: 1;
+
+    .main-title {
+      text-align: center;
+      padding-bottom: 1rem;
+      span {
+        color: color(secondary);
+        font-size: 20vw;
+        line-height: 90px;
+      }
+    }
+
+    .secondary-title {
+      text-align: center;
+      span {
+        color: color(information);
+        font-size: 5vw;
+
+        // text-align: center;
+      }
+    }
   }
 }

@@ -21,7 +21,7 @@ body {
   height: 20vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 0%, 0% 100%);
-  background-color: #e7e7e7;
+  background-color: #f0f5f9;
 }
 
 section {
@@ -31,7 +31,7 @@ section {
 }
 
 section#home {
-  background: #e7e7e7;
+  background: #f0f5f9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,12 +48,12 @@ section#home {
 }
 
 section#home .main-title span {
-  color: #ff7315;
+  color: #1e2022;
   font-size: 10vw;
 }
 
 section#home .secondary-title span {
-  color: #3a3535;
+  color: #52616b;
   font-size: 2vw;
 }
 
@@ -78,7 +78,7 @@ nav {
 }
 
 .title {
-  color: #232020;
+  color: #1e2022;
 }
 
 .toggle-button {
@@ -101,7 +101,7 @@ nav {
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: #232020;
+  background-color: #1e2022;
   border-radius: 10px;
 }
 
@@ -119,7 +119,7 @@ nav {
 
 .navbar-links ul li a {
   text-decoration: none;
-  color: #232020;
+  color: #1e2022;
   padding: 1rem;
   display: block;
   -webkit-transition: all 0.2s ease-in-out;
@@ -127,8 +127,14 @@ nav {
 }
 
 .navbar-links ul li a:hover {
-  color: #8d8282;
+  color: #7e868e;
   cursor: pointer;
+}
+
+.inview span {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 @media (max-width: 600px) {
@@ -152,12 +158,12 @@ nav {
     text-align: center;
   }
   .navbar-links ul li a {
-    color: #232020;
+    color: #1e2022;
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
   .navbar-links ul li a:hover {
-    color: #8d8282;
+    color: #7e868e;
     background-color: #fff3f5;
   }
   .navbar-links.active {
@@ -173,6 +179,39 @@ nav {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  section#home {
+    background: #f0f5f9;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 1;
+  }
+  section#home .main-title {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  section#home .main-title span {
+    color: #1e2022;
+    font-size: 20vw;
+    line-height: 90px;
+  }
+  section#home .secondary-title {
+    text-align: center;
+  }
+  section#home .secondary-title span {
+    color: #52616b;
+    font-size: 5vw;
   }
 }
 /*# sourceMappingURL=main.css.map */
